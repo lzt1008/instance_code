@@ -25,10 +25,6 @@ quote = "1"
 syn = "2"
 synstructure = "0.13"
 
-# Configuation for cargo-release
-[workspace.metadata.release]
-pre-release-commit-message = "release: v{{version}}"
-
 [package]
 name = "instance_code"
 version = "0.1.0"
