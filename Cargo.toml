@@ -11,7 +11,7 @@ categories = [
     "development-tools::procedural-macro-helpers",
     "development-tools::build-utils",
 ]
-keywords = ["const", "proc", "compile-time-deserialization"]
+keywords = ["const", "proc", "static-deserialize"]
 repository = "https://github.com/lzt1008/instance_code"
 readme = "README.md"
 license = "MIT"
