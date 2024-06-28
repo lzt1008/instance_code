@@ -1,0 +1,58 @@
+
+[workspace]
+members = [".", "derive"]
+resolver = "2"
+
+[workspace.package]
+edition = "2021"
+authors = ["Neo Lyon"]
+description = "Turn instances into source code"
+categories = [
+    "development-tools::procedural-macro-helpers",
+    "development-tools::build-utils",
+]
+keywords = ["const", "proc", "compile-time-deserialization"]
+repository = "https://github.com/lzt1008/instance_code"
+readme = "README.md"
+license = "MIT"
+
+[workspace.dependencies]
+instance_code = { version = "0.1.0", path = "." }
+instance_code_derive = { version = "0.1.0", path = "derive" }
+
+proc-macro2 = "1"
+quote = "1"
+syn = "2"
+synstructure = "0.13"
+
+# Configuation for cargo-release
+[workspace.metadata.release]
+pre-release-commit-message = "release: v{{version}}"
+
+[package]
+name = "instance_code"
+version = "0.1.0"
+categories.workspace = true
+keywords.workspace = true
+edition.workspace = true
+description.workspace = true
+license.workspace = true
+
+[features]
+default = ["derive"]
+derive = ["dep:instance_code_derive"]
+# Extra impls
+smol_str = ["dep:smol_str"]
+phf = ["dep:phf"]
+
+[dependencies]
+instance_code_derive = { workspace = true, optional = true }
+proc-macro2.workspace = true
+quote.workspace = true
+serde = { version = "1.0.203", features = ["derive"] }
+serde_json = "1.0.118"
+toml = "0.8.14"
+thiserror = "1.0.61"
+
+smol_str = { version = "0.2.2", optional = true }
+phf = { version = "0.11.2", features = ["macros"], optional = true }
