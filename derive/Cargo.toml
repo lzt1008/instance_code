@@ -1,7 +1,7 @@
 [package]
 name = "instance_code_derive"
 description = "Derive macro for instance_code"
-version = "0.1.0"
+version = "0.1.1"
 categories.workspace = true
 keywords.workspace = true
 edition.workspace = true
