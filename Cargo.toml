@@ -17,7 +17,7 @@ readme = "README.md"
 license = "MIT"
 
 [workspace.dependencies]
-instance_code = { version = "0.1.1", path = "." }
+instance_code = { version = "0.1.2", path = "." }
 instance_code_derive = { version = "0.1.0", path = "derive" }
 
 proc-macro2 = "1"
@@ -27,7 +27,7 @@ synstructure = "0.13"
 
 [package]
 name = "instance_code"
-version = "0.1.1"
+version = "0.1.2"
 categories.workspace = true
 keywords.workspace = true
 edition.workspace = true
