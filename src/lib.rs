@@ -9,8 +9,8 @@ pub use proc_macro2::TokenStream;
 #[doc(no_inline)]
 pub use quote::quote;
 
-#[cfg(feature = "derive")]
-pub use instance_code_derive::InstanceCode;
+// #[cfg(feature = "derive")]
+// pub use instance_code_derive::InstanceCode;
 
 pub trait InstanceCode {
     fn instance_code(&self) -> TokenStream;
