@@ -44,7 +44,7 @@ smol_str = ["dep:smol_str"]
 phf = ["dep:phf"]
 
 [dependencies]
-instance_code_derive = { workspace = true, optional = true }
+# instance_code_derive = { workspace = true, optional = true }
 proc-macro2.workspace = true
 quote.workspace = true
 serde = { version = "1.0.203", features = ["derive"] }

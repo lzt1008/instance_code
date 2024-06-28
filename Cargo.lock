@@ -56,7 +56,6 @@ dependencies = [
 name = "instance_code"
 version = "0.1.0"
 dependencies = [
- "instance_code_derive",
  "phf",
  "proc-macro2",
  "quote",
