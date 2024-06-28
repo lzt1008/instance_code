@@ -20,5 +20,5 @@ syn.workspace = true
 synstructure.workspace = true
 tempfile = "3.10.1"
 
-# [dev-dependencies]
-# instance_code = { workspace = true, features = ["derive"] }
+[dev-dependencies]
+instance_code = { workspace = true, features = ["derive"] }
