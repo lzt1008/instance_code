@@ -4,6 +4,7 @@ use serde::de::DeserializeOwned;
 use thiserror::Error;
 
 use serde_json as json;
+use serde_yaml as yaml;
 
 #[derive(Debug, Error)]
 pub enum ParseError {
@@ -15,6 +16,8 @@ pub enum ParseError {
     Json(#[from] json::Error),
     #[error("Failed to parse toml: {0}")]
     Toml(#[from] toml::de::Error),
+    #[error("Failed to parse yaml: {0}")]
+    Yaml(#[from] yaml::Error),
 }
 
 pub fn parse<T>(path: &str) -> Result<T, ParseError>
@@ -30,6 +33,7 @@ where
     Ok(match extension {
         "json" => json::from_str(&content)?,
         "toml" => toml::from_str(&content)?,
+        "yaml" | "yml" => yaml::from_str(&content)?,
         _ => return Err(ParseError::UnsupportedExtension),
     })
 }

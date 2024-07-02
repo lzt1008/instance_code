@@ -53,3 +53,4 @@ thiserror = "1.0.61"
 
 smol_str = { version = "0.2.2", optional = true }
 phf = { version = "0.11.2", features = ["macros"], optional = true }
+serde_yaml = "0.9.34"
