@@ -58,12 +58,14 @@ version = "0.1.3"
 dependencies = [
  "instance_code_derive",
  "phf",
+ "prettyplease",
  "proc-macro2",
  "quote",
  "serde",
  "serde_json",
  "serde_yaml",
  "smol_str",
+ "syn",
  "thiserror",
  "toml",
 ]
@@ -146,6 +148,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "90fcb95eef784c2ac79119d1dd819e162b5da872ce6f3c3abe1e8ca1c082f72b"
 dependencies = [
  "siphasher",
+]
+
+[[package]]
+name = "prettyplease"
+version = "0.2.20"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5f12335488a2f3b0a83b14edad48dca9879ce89b2edd10e80237e4e852dd645e"
+dependencies = [
+ "proc-macro2",
+ "syn",
 ]
 
 [[package]]

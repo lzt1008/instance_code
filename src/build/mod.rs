@@ -27,5 +27,22 @@ where
 
     println!("cargo:rerun-if-changed={}", file);
 
+    #[cfg(feature = "pretty")]
+    {
+        let file = format!(
+            " const _: () = {{ {} }};",
+            instance.instance_code().to_string()
+        );
+        let formatted = prettyplease::unparse(&syn::parse_str(&file).unwrap());
+
+        provide_instance_code(
+            key,
+            &formatted
+                .trim_end_matches("};\n")
+                .trim_start_matches("const _: () = {"),
+        );
+    }
+
+    #[cfg(not(feature = "pretty"))]
     provide_instance_code(key, &instance.instance_code().to_string());
 }
