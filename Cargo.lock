@@ -54,7 +54,7 @@ dependencies = [
 
 [[package]]
 name = "instance_code"
-version = "0.1.3"
+version = "0.1.4"
 dependencies = [
  "instance_code_derive",
  "phf",
